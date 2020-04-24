@@ -45,10 +45,12 @@ def main():
         if counter == 0:
             print("\Programando Trades...")
         else:
-            addOption(row[0].replace('/', ''), row[1], row[2], row[3])
+            startTime = datetime.datetime.strptime(row[1], '%H:%M')
+            timeResult = startTime - datetime.timedelta(seconds=6)
+            addOption(row[0].replace('/', ''), timeResult.strftime("%H:%M:%S"), row[2], row[3])
         counter = counter + 1
     
-    print("\nProcessando...")
+    print("\nProcessando Trades...")
 
     while True:
        schedule.run_pending()

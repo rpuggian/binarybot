@@ -1,4 +1,5 @@
 from iqoptionapi.stable_api import IQ_Option
+import schedule
 import logging
 
 class IQOption:
@@ -67,9 +68,20 @@ class IQOption:
             _, ordem_id = self.api.buy(self.entrada, self.ativo, self.direcao, self.timeframe)
             result = self.api.check_win_v3(ordem_id)
             if result < 0:
-                logging.info("Ativo:{}, Valor:{}, Result:LOSE".format(self.ativo, self.entrada))
-                print("---> Você perdeu..")
+            
+                print("---> Você perdeu: Ativo:{}, Valor:{}, Result:LOSE".format(self.ativo, self.entrada))
+                print("---> Tentando Martin Gale...")
+                newValue = self.entrada*2
+                print("---> Fazendo Trade, Ativo:{}, Valor:{}, EXP:{}min".format(self.ativo, newValue, self.timeframe))
+                _, newordem_id = self.api.buy(newValue, self.ativo, self.direcao, self.timeframe)
+                newResult = self.api.check_win_v3(newordem_id)
+                if newResult < 0:
+                    logging.info("Ativo:{}, Valor:{}, Result:LOSE".format(self.ativo, newValue))
+                else: 
+                    logging.info("Ativo:{}, Valor:{}, Result:WIN".format(self.ativo, newValue))
+                    print("---> Você ganhou.")
             else: 
                 logging.info("Ativo:{}, Valor:{}, Result:WIN".format(self.ativo, self.entrada))
                 print("---> Você ganhou.")
+        schedule.CancelJob
         print("\nProcessando...")

@@ -63,3 +63,38 @@
 24-04-2020 15:04:05 ERROR: O ativo NZDUSD nao foi encontrado
 24-04-2020 15:09:00 INFO: Ativo:EURUSD, Valor:1.0, Result:LOSE
 24-04-2020 15:09:00 INFO: Ativo:EURUSD, Valor:1.0, Result:LOSE
+24-04-2020 16:16:26 INFO: Bot Started!
+24-04-2020 16:16:28 INFO: Sucesso ao entrar na conta IQ Option
+24-04-2020 16:16:28 INFO: Ativo definido como EURUSD
+24-04-2020 16:16:28 INFO: Timeframe definido para 5 minutos
+24-04-2020 16:18:00 INFO: Running job Every 1 day at 16:18:00 do run_threaded(<bound method IQOption.buy of <iqoption.IQOption object at 0x11414e390>>) (last run: [never], next run: 2020-04-24 16:18:00)
+24-04-2020 16:18:04 ERROR: O ativo EURUSD nao foi encontrado
+24-04-2020 16:20:23 INFO: Bot Started!
+24-04-2020 16:20:26 INFO: Sucesso ao entrar na conta IQ Option
+24-04-2020 16:20:26 INFO: Ativo definido como GBPUSD-OTC
+24-04-2020 16:20:26 INFO: Timeframe definido para 5 minutos
+24-04-2020 16:21:00 INFO: Running job Every 1 day at 16:21:00 do run_threaded(<bound method IQOption.buy of <iqoption.IQOption object at 0x1132540b8>>) (last run: [never], next run: 2020-04-24 16:21:00)
+24-04-2020 16:21:04 INFO: Ativo encontrado
+24-04-2020 16:26:00 INFO: Ativo:GBPUSD-OTC, Valor:1.0, Result:WIN
+24-04-2020 16:26:16 INFO: Bot Started!
+24-04-2020 16:26:18 INFO: Sucesso ao entrar na conta IQ Option
+24-04-2020 16:26:18 INFO: Ativo definido como GBPUSD-OTC
+24-04-2020 16:26:18 INFO: Timeframe definido para 5 minutos
+24-04-2020 16:27:00 INFO: Running job Every 1 day at 16:27:00 do run_threaded(<bound method IQOption.buy of <iqoption.IQOption object at 0x108116438>>) (last run: [never], next run: 2020-04-24 16:27:00)
+24-04-2020 16:27:04 INFO: Ativo encontrado
+24-04-2020 16:37:00 INFO: Ativo:GBPUSD-OTC, Valor:2.0, Result:WIN
+24-04-2020 17:02:35 INFO: Bot Started!
+24-04-2020 17:02:58 INFO: Bot Started!
+24-04-2020 17:09:40 INFO: Bot Started!
+24-04-2020 17:11:34 INFO: Bot Started!
+24-04-2020 17:23:15 INFO: Bot Started!
+24-04-2020 17:23:18 INFO: Sucesso ao entrar na conta IQ Option
+24-04-2020 17:23:18 INFO: Ativo definido como GBPUSD-OTC
+24-04-2020 17:23:18 INFO: Timeframe definido para 5 minutos
+24-04-2020 17:24:54 INFO: Running job Every 1 day at 17:24:54 do run_threaded(<bound method IQOption.buy of <iqoption.IQOption object at 0x10ac6c1d0>>) (last run: [never], next run: 2020-04-24 17:24:54)
+24-04-2020 17:25:02 INFO: Ativo encontrado
+24-04-2020 17:30:00 INFO: Ativo:GBPUSD-OTC, Valor:1.0, Result:WIN
+24-04-2020 18:57:08 INFO: Bot Started!
+24-04-2020 18:57:11 INFO: Sucesso ao entrar na conta IQ Option
+24-04-2020 18:57:11 INFO: Ativo definido como GBPUSD-OTC
+24-04-2020 18:57:11 INFO: Timeframe definido para 5 minutos
