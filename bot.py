@@ -8,7 +8,11 @@ from logs import Logs
 from iqoption import IQOption
 from configs import Configuracoes
 import csv   
+import threading
 
+def run_threaded(job_func):
+    job_thread = threading.Thread(target=job_func)
+    job_thread.start()
 
 def addOption(ativo, startTime, direcao, entrada):
     #login
@@ -28,7 +32,7 @@ def addOption(ativo, startTime, direcao, entrada):
     IQ.definirConfiguracoes(configuracao.getAtivo(), configuracao.getTimeframe(), 1)
     IQ.contaDemo()
     IQ.setEntrada(entrada)
-    schedule.every().day.at(startTime).do(IQ.buy)
+    schedule.every().day.at(startTime).do(run_threaded, IQ.buy)
     print("Trade Programado-->Ativo:{}, Entrada:{}, Action:{}, Valor:{} ✅".format(ativo, startTime, direcao, entrada))
 
 def main():
