@@ -1,6 +1,7 @@
 from iqoptionapi.stable_api import IQ_Option
 import schedule
 import logging
+import functools
 
 class IQOption:
     def __init__(self, email, senha):
@@ -61,27 +62,35 @@ class IQOption:
         else:
             logging.error("Nao foi possivel definir o preco de entrada")
             return False
-
+    
     def buy(self):
         if self.checarAtivo(self.ativo) :
-            print("---> Fazendo Trade, Ativo:{}, Valor:{}, EXP:{}min".format(self.ativo, self.entrada, self.timeframe))
-            _, ordem_id = self.api.buy(self.entrada, self.ativo, self.direcao, self.timeframe)
-            result = self.api.check_win_v3(ordem_id)
-            if result < 0:
-            
-                print("---> Você perdeu: Ativo:{}, Valor:{}, Result:LOSE".format(self.ativo, self.entrada))
-                print("---> Tentando Martin Gale...")
-                newValue = self.entrada*2
-                print("---> Fazendo Trade, Ativo:{}, Valor:{}, EXP:{}min".format(self.ativo, newValue, self.timeframe))
-                _, newordem_id = self.api.buy(newValue, self.ativo, self.direcao, self.timeframe)
-                newResult = self.api.check_win_v3(newordem_id)
-                if newResult < 0:
-                    logging.info("Ativo:{}, Valor:{}, Result:LOSE".format(self.ativo, newValue))
+            try:
+                print("---> Fazendo Trade, Ativo:{}, Valor:{}, EXP:{}min".format(self.ativo, self.entrada, self.timeframe))
+                _, ordem_id = self.api.buy(self.entrada, self.ativo, self.direcao, self.timeframe)
+                result = self.api.check_win_v3(ordem_id)
+                if result < 0:
+                
+                    print("---> Você perdeu: Ativo:{}, Valor:{}, Result:LOSE".format(self.ativo, self.entrada))
+                    print("---> Tentando Martin Gale...")
+                    newValue = self.entrada*2
+                    print("---> Fazendo Trade, Ativo:{}, Valor:{}, EXP:{}min".format(self.ativo, newValue, self.timeframe))
+                    _, newordem_id = self.api.buy(newValue, self.ativo, self.direcao, self.timeframe)
+                    newResult = self.api.check_win_v3(newordem_id)
+                    if newResult < 0:
+                        logging.info("Ativo:{}, Valor:{}, Result:LOSE".format(self.ativo, newValue))
+                    else: 
+                        logging.info("Ativo:{}, Valor:{}, Result:WIN".format(self.ativo, newValue))
+                        print("---> Você ganhou.")
                 else: 
-                    logging.info("Ativo:{}, Valor:{}, Result:WIN".format(self.ativo, newValue))
+                    logging.info("Ativo:{}, Valor:{}, Result:WIN".format(self.ativo, self.entrada))
                     print("---> Você ganhou.")
-            else: 
-                logging.info("Ativo:{}, Valor:{}, Result:WIN".format(self.ativo, self.entrada))
-                print("---> Você ganhou.")
+            except:
+                import traceback
+                print("Error ao executar o trade.")
+                logging.error("Error ao executar trade.")
+                logging.error(traceback.format_exc())
         schedule.CancelJob
         print("\nProcessando...")
+
+    

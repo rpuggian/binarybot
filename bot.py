@@ -10,6 +10,7 @@ from configs import Configuracoes
 import csv   
 import threading
 
+
 def run_threaded(job_func):
     job_thread = threading.Thread(target=job_func)
     job_thread.start()
@@ -30,7 +31,7 @@ def addOption(ativo, startTime, direcao, entrada):
     configuracao.setTimeframe(5)
     IQ.setDirecao(direcao)
     IQ.definirConfiguracoes(configuracao.getAtivo(), configuracao.getTimeframe(), 1)
-    IQ.contaDemo()
+    IQ.contaReal()
     IQ.setEntrada(entrada)
     schedule.every().day.at(startTime).do(run_threaded, IQ.buy)
     print("Trade Programado-->Ativo:{}, Entrada:{}, Action:{}, Valor:{} ✅".format(ativo, startTime, direcao, entrada))
