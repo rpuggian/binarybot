@@ -10,11 +10,6 @@ import threading
 logs = Logs()
 
 
-def run_threaded(job_func):
-    job_thread = threading.Thread(target=job_func)
-    job_thread.start()
-
-
 def add_option(ativo, startTime, direcao, entrada):
     # login
     email = os.getenv('IQ_USER')
@@ -33,7 +28,7 @@ def add_option(ativo, startTime, direcao, entrada):
     IQ.definirConfiguracoes(configuracao.getAtivo(), configuracao.getTimeframe(), 1)
     IQ.contaReal()
     IQ.setEntrada(entrada)
-    schedule.every().day.at(startTime).do(run_threaded, IQ.buy)
+    schedule.every().day.at(startTime).do(IQ.buy)
     logs.print_message("Trade Programado-->Ativo:{}, Entrada:{}, Action:{}, Valor:{} ✅".format(ativo, startTime, direcao, entrada))
 
 

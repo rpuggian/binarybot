@@ -1,32 +1,88 @@
-26-04-2020 06:59:31 INFO: Bot Started!
-26-04-2020 07:00:35 INFO: Bot Started!
-26-04-2020 07:00:38 INFO: Sucesso ao entrar na conta IQ Option
-26-04-2020 07:00:38 INFO: Ativo definido como USDCHF-OTC
-26-04-2020 07:00:38 INFO: Timeframe definido para 5 minutos
-26-04-2020 07:00:40 INFO: Sucesso ao entrar na conta IQ Option
-26-04-2020 07:00:40 INFO: Ativo definido como EURGBP-OTC
-26-04-2020 07:00:40 INFO: Timeframe definido para 5 minutos
-26-04-2020 07:00:42 INFO: Sucesso ao entrar na conta IQ Option
-26-04-2020 07:00:42 INFO: Ativo definido como EURGBP-OTC
-26-04-2020 07:00:42 INFO: Timeframe definido para 5 minutos
-26-04-2020 07:00:43 INFO: Sucesso ao entrar na conta IQ Option
-26-04-2020 07:00:43 INFO: Ativo definido como EURUSD-OTC
-26-04-2020 07:00:43 INFO: Timeframe definido para 5 minutos
-26-04-2020 07:00:45 INFO: Sucesso ao entrar na conta IQ Option
-26-04-2020 07:00:45 INFO: Ativo definido como EURUSD-OTC
-26-04-2020 07:00:45 INFO: Timeframe definido para 5 minutos
-26-04-2020 07:00:46 INFO: Sucesso ao entrar na conta IQ Option
-26-04-2020 07:00:46 INFO: Ativo definido como GBPJPY-OTC
-26-04-2020 07:00:46 INFO: Timeframe definido para 5 minutos
-26-04-2020 07:00:48 INFO: Sucesso ao entrar na conta IQ Option
-26-04-2020 07:00:48 INFO: Ativo definido como EURUSD-OTC
-26-04-2020 07:00:48 INFO: Timeframe definido para 5 minutos
-26-04-2020 07:00:49 INFO: Sucesso ao entrar na conta IQ Option
-26-04-2020 07:00:49 INFO: Ativo definido como EURGBP-OTC
-26-04-2020 07:00:49 INFO: Timeframe definido para 5 minutos
-26-04-2020 07:00:51 INFO: Sucesso ao entrar na conta IQ Option
-26-04-2020 07:00:51 INFO: Ativo definido como GBPJPY-OTC
-26-04-2020 07:00:51 INFO: Timeframe definido para 5 minutos
-26-04-2020 07:44:54 INFO: Running job Every 1 day at 07:44:54 do run_threaded(<bound method IQOption.buy of <iqoption.IQOption object at 0x10f450f28>>) (last run: [never], next run: 2020-04-26 07:44:54)
-26-04-2020 07:45:00 INFO: Ativo encontrado
-26-04-2020 07:54:53 INFO: Ativo:USDCHF-OTC, Valor:4.0, Result:WIN
+26-04-2020 07:58:48 INFO: Bot Started!
+26-04-2020 07:58:48 INFO: Programming Orders...
+26-04-2020 07:58:51 INFO: Ativo definido como EURGBP-OTC
+26-04-2020 07:58:51 INFO: Timeframe definido para 5 minutos
+26-04-2020 07:58:51 INFO: Trade Programado-->Ativo:EURGBP-OTC, Entrada:08:14:54, Action:PUT, Valor:2 ✅
+26-04-2020 07:58:52 INFO: Ativo definido como EURGBP-OTC
+26-04-2020 07:58:52 INFO: Timeframe definido para 5 minutos
+26-04-2020 07:58:52 INFO: Trade Programado-->Ativo:EURGBP-OTC, Entrada:10:29:54, Action:PUT, Valor:2 ✅
+26-04-2020 07:58:54 INFO: Ativo definido como EURUSD-OTC
+26-04-2020 07:58:54 INFO: Timeframe definido para 5 minutos
+26-04-2020 07:58:54 INFO: Trade Programado-->Ativo:EURUSD-OTC, Entrada:10:14:54, Action:PUT, Valor:2 ✅
+26-04-2020 07:58:56 INFO: Ativo definido como EURUSD-OTC
+26-04-2020 07:58:56 INFO: Timeframe definido para 5 minutos
+26-04-2020 07:58:56 INFO: Trade Programado-->Ativo:EURUSD-OTC, Entrada:11:59:54, Action:PUT, Valor:2 ✅
+26-04-2020 07:58:58 INFO: Ativo definido como GBPJPY-OTC
+26-04-2020 07:58:58 INFO: Timeframe definido para 5 minutos
+26-04-2020 07:58:58 INFO: Trade Programado-->Ativo:GBPJPY-OTC, Entrada:12:14:54, Action:PUT, Valor:2 ✅
+26-04-2020 07:58:59 INFO: Ativo definido como EURUSD-OTC
+26-04-2020 07:58:59 INFO: Timeframe definido para 5 minutos
+26-04-2020 07:58:59 INFO: Trade Programado-->Ativo:EURUSD-OTC, Entrada:12:59:54, Action:PUT, Valor:2 ✅
+26-04-2020 07:59:01 INFO: Ativo definido como EURGBP-OTC
+26-04-2020 07:59:01 INFO: Timeframe definido para 5 minutos
+26-04-2020 07:59:01 INFO: Trade Programado-->Ativo:EURGBP-OTC, Entrada:13:14:54, Action:PUT, Valor:2 ✅
+26-04-2020 07:59:03 INFO: Ativo definido como GBPJPY-OTC
+26-04-2020 07:59:03 INFO: Timeframe definido para 5 minutos
+26-04-2020 07:59:03 INFO: Trade Programado-->Ativo:GBPJPY-OTC, Entrada:15:14:54, Action:PUT, Valor:2 ✅
+26-04-2020 07:59:03 INFO: Processing Orders...
+26-04-2020 08:14:54 INFO: Running job Every 1 day at 08:14:54 do run_threaded(<bound method IQOption.buy of <iqoption.IQOption object at 0x10c182f98>>) (last run: [never], next run: 2020-04-26 08:14:54)
+26-04-2020 08:15:05 INFO: Ativo encontrado
+26-04-2020 08:15:05 INFO: Executing programmed trade, paper:EURGBP-OTC, action:PUT, value:2.0, exp:5min
+26-04-2020 08:19:54 INFO: WIN: paper:EURGBP-OTC, action:PUT, value:2.0
+26-04-2020 08:19:54 INFO: New balance: $22.15
+26-04-2020 08:19:54 INFO: Processing Orders...
+26-04-2020 10:14:54 INFO: Running job Every 1 day at 10:14:54 do run_threaded(<bound method IQOption.buy of <iqoption.IQOption object at 0x10c179080>>) (last run: [never], next run: 2020-04-26 10:14:54)
+26-04-2020 10:15:02 INFO: Ativo encontrado
+26-04-2020 10:15:02 INFO: Executing programmed trade, paper:EURUSD-OTC, action:PUT, value:2.0, exp:5min
+26-04-2020 10:19:55 INFO: WIN: paper:EURUSD-OTC, action:PUT, value:2.0
+26-04-2020 10:19:56 INFO: New balance: $23.89
+26-04-2020 10:19:56 INFO: Processing Orders...
+26-04-2020 10:29:54 INFO: Running job Every 1 day at 10:29:54 do run_threaded(<bound method IQOption.buy of <iqoption.IQOption object at 0x10c1792b0>>) (last run: [never], next run: 2020-04-26 10:29:54)
+26-04-2020 10:30:02 INFO: Ativo encontrado
+26-04-2020 10:30:02 INFO: Executing programmed trade, paper:EURGBP-OTC, action:PUT, value:2.0, exp:5min
+26-04-2020 10:34:56 INFO: LOST: paper:EURGBP-OTC, action:PUT, value:2.0
+26-04-2020 10:34:56 INFO: Initializing Martingale paper:EURGBP-OTC, action:PUT, value:2.0
+26-04-2020 10:34:56 INFO: Executing programmed trade, paper:EURGBP-OTC, action:PUT, value:4.0, exp:5min
+26-04-2020 10:39:55 INFO: WIN: paper:EURGBP-OTC, action:PUT, value:4.0
+26-04-2020 10:39:56 INFO: New balance: $25.37
+26-04-2020 10:39:56 INFO: Processing Orders...
+26-04-2020 11:59:54 INFO: Running job Every 1 day at 11:59:54 do run_threaded(<bound method IQOption.buy of <iqoption.IQOption object at 0x10c1c5a20>>) (last run: [never], next run: 2020-04-26 11:59:54)
+26-04-2020 12:00:02 INFO: Ativo encontrado
+26-04-2020 12:00:02 INFO: Executing programmed trade, paper:EURUSD-OTC, action:PUT, value:2.0, exp:5min
+26-04-2020 12:04:56 INFO: LOST: paper:EURUSD-OTC, action:PUT, value:2.0
+26-04-2020 12:04:56 INFO: Initializing Martingale paper:EURUSD-OTC, action:PUT, value:2.0
+26-04-2020 12:04:56 INFO: Executing programmed trade, paper:EURUSD-OTC, action:PUT, value:4.0, exp:5min
+26-04-2020 12:09:56 INFO: LOST: paper:EURUSD-OTC, action:PUT, value:2.0
+26-04-2020 12:09:57 INFO: New balance: $19.37
+26-04-2020 12:09:57 INFO: Processing Orders...
+26-04-2020 12:14:54 INFO: Running job Every 1 day at 12:14:54 do run_threaded(<bound method IQOption.buy of <iqoption.IQOption object at 0x10c1c5630>>) (last run: [never], next run: 2020-04-26 12:14:54)
+26-04-2020 12:15:02 INFO: Ativo encontrado
+26-04-2020 12:15:02 INFO: Executing programmed trade, paper:GBPJPY-OTC, action:PUT, value:2.0, exp:5min
+26-04-2020 12:15:02 ERROR: Error on execute order. paper:GBPJPY-OTC, action:PUT, value:2.0
+26-04-2020 12:15:02 ERROR: Traceback (most recent call last):
+  File "/Users/rpuggian/repos/pessoal/binarybot/iqoption.py", line 75, in buy
+    _, order_id = self.api.buy(self.entrada, self.ativo, self.direcao, self.timeframe)
+  File "/Users/rpuggian/.pyenv/versions/3.7.2/lib/python3.7/site-packages/iqoptionapi-6.8.9.1-py3.7.egg/iqoptionapi/stable_api.py", line 810, in buy
+    price, OP_code.ACTIVES[ACTIVES], ACTION, expirations, req_id)
+KeyError: 'GBPJPY-OTC'
+
+26-04-2020 12:15:03 INFO: New balance: $19.37
+26-04-2020 12:15:03 INFO: Processing Orders...
+26-04-2020 12:59:54 INFO: Running job Every 1 day at 12:59:54 do run_threaded(<bound method IQOption.buy of <iqoption.IQOption object at 0x10c1db828>>) (last run: [never], next run: 2020-04-26 12:59:54)
+26-04-2020 13:00:02 INFO: Ativo encontrado
+26-04-2020 13:00:02 INFO: Executing programmed trade, paper:EURUSD-OTC, action:PUT, value:2.0, exp:5min
+26-04-2020 13:04:57 INFO: LOST: paper:EURUSD-OTC, action:PUT, value:2.0
+26-04-2020 13:04:57 INFO: Initializing Martingale paper:EURUSD-OTC, action:PUT, value:2.0
+26-04-2020 13:04:57 INFO: Executing programmed trade, paper:EURUSD-OTC, action:PUT, value:4.0, exp:5min
+26-04-2020 13:09:57 INFO: LOST: paper:EURUSD-OTC, action:PUT, value:2.0
+26-04-2020 13:09:57 INFO: New balance: $13.37
+26-04-2020 13:09:57 INFO: Processing Orders...
+26-04-2020 13:14:54 INFO: Running job Every 1 day at 13:14:54 do run_threaded(<bound method IQOption.buy of <iqoption.IQOption object at 0x10c1c5588>>) (last run: [never], next run: 2020-04-26 13:14:54)
+26-04-2020 13:15:02 INFO: Ativo encontrado
+26-04-2020 13:15:02 INFO: Executing programmed trade, paper:EURGBP-OTC, action:PUT, value:2.0, exp:5min
+26-04-2020 13:19:57 INFO: LOST: paper:EURGBP-OTC, action:PUT, value:2.0
+26-04-2020 13:19:57 INFO: Initializing Martingale paper:EURGBP-OTC, action:PUT, value:2.0
+26-04-2020 13:19:57 INFO: Executing programmed trade, paper:EURGBP-OTC, action:PUT, value:4.0, exp:5min
+26-04-2020 13:24:57 INFO: LOST: paper:EURGBP-OTC, action:PUT, value:2.0
+26-04-2020 13:24:57 INFO: New balance: $7.37
+26-04-2020 13:24:57 INFO: Processing Orders...
