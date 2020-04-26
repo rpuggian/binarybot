@@ -175,3 +175,8 @@ Processing Orders...
 26-04-2020 14:54:54 INFO: Running job Every 1 day at 14:54:54 do buy() (last run: [never], next run: 2020-04-26 14:54:54)
 26-04-2020 14:54:58 INFO: Ativo encontrado
 26-04-2020 14:54:58 INFO: Executing programmed trade, paper:EURGBP-OTC, action:PUT, value:2.0, exp:5min
+26-04-2020 19:18:43 INFO: Bot Started!
+26-04-2020 19:18:46 INFO: Conected: IQ Option!
+26-04-2020 19:20:54 INFO: Bot Started!
+26-04-2020 19:20:57 INFO: Conected: IQ Option!
+26-04-2020 19:20:57 INFO: Original balance: $ 6642.56

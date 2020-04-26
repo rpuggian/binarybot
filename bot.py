@@ -21,15 +21,14 @@ def login(api):
         return True
 
 
-def add_option(ativo, startTime, direcao, entrada, stop_loss, stop_win, api):
+def add_option(ativo, startTime, direcao, entrada, stop_loss, stop_win, api, original_balance):
     configuracao = Configuracoes()
     configuracao.setAtivo(ativo)
     configuracao.setTimeframe(5)
     IQ = IQOption(api)
     IQ.setDirecao(direcao)
     IQ.definirConfiguracoes(configuracao.getAtivo(), configuracao.getTimeframe(), 1)
-    IQ.contaReal()
-    original_balance = api.get_balance()
+    IQ.contaDemo()
     IQ.set_original_balance(original_balance)
     IQ.set_stop_win(stop_win)
     IQ.set_stop_loss(stop_loss)
@@ -52,8 +51,10 @@ def main():
     logs.print_message("Conected: IQ Option!")
 
     #stops
-    stop_loss = input("Set a stop loss value for today:")
-    stop_win = input("Set a stop win value for today:")
+    original_balance = api.get_balance()
+    logs.print_message("Original balance: $ {}".format(original_balance))
+    stop_loss = input("Set a stop loss value:")
+    # stop_win = input("Set a stop win value:")
 
     #read trades
     f = open("trades.csv")
@@ -65,7 +66,7 @@ def main():
         else:
             start_time = datetime.datetime.strptime(row[1], '%H:%M')
             time_result = start_time - datetime.timedelta(seconds=10)
-            add_option(row[0].replace('/', ''), time_result.strftime("%H:%M:%S"), row[2], row[3], stop_loss, stop_win, api)
+            add_option(row[0].replace('/', ''), time_result.strftime("%H:%M:%S"), row[2], row[3], stop_loss, stop_win, api, original_balance)
         counter = counter + 1
 
     logs.print_message("\nProcessing Orders...")
