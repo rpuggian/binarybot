@@ -28,7 +28,7 @@ def add_option(ativo, startTime, direcao, entrada, stop_loss, api):
     IQ = IQOption(api)
     IQ.setDirecao(direcao)
     IQ.definirConfiguracoes(configuracao.getAtivo(), configuracao.getTimeframe(), 1)
-    IQ.contaDemo()
+    IQ.contaReal()
     IQ.set_stop_loss(stop_loss)
     IQ.setEntrada(entrada)
     schedule.every().day.at(startTime).do(IQ.buy)
