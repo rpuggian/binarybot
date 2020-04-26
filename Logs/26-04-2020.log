@@ -27,3 +27,6 @@
 26-04-2020 07:00:51 INFO: Sucesso ao entrar na conta IQ Option
 26-04-2020 07:00:51 INFO: Ativo definido como GBPJPY-OTC
 26-04-2020 07:00:51 INFO: Timeframe definido para 5 minutos
+26-04-2020 07:44:54 INFO: Running job Every 1 day at 07:44:54 do run_threaded(<bound method IQOption.buy of <iqoption.IQOption object at 0x10f450f28>>) (last run: [never], next run: 2020-04-26 07:44:54)
+26-04-2020 07:45:00 INFO: Ativo encontrado
+26-04-2020 07:54:53 INFO: Ativo:USDCHF-OTC, Valor:4.0, Result:WIN
