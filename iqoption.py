@@ -1,7 +1,10 @@
 from iqoptionapi.stable_api import IQ_Option
 import schedule
 import logging
-import functools
+from logs import Logs
+
+logs = Logs()
+
 
 class IQOption:
     def __init__(self, email, senha):
@@ -16,13 +19,11 @@ class IQOption:
         self.posicao = int(posicao)
 
     def efetuarLogin(self):
-        self.conectado, erro = self.api.connect()
-        if self.conectado == False:
-            logging.error(
-                "Erro ao tentar entrar na conta IQ Option -> {}".format(str(erro)))
+        self.conectado, error = self.api.connect()
+        if not self.conectado:
+            logging.error(error)
             return False
         else:
-            logging.info("Sucesso ao entrar na conta IQ Option")
             return True
 
     def checarAtivo(self, ativo):
@@ -46,7 +47,7 @@ class IQOption:
 
     def pegarMoeda(self):
         return self.api.get_currency()
-    
+
     def setDirecao(self, direcao):
         self.direcao = direcao
 
@@ -62,35 +63,46 @@ class IQOption:
         else:
             logging.error("Nao foi possivel definir o preco de entrada")
             return False
-    
+
     def buy(self):
-        if self.checarAtivo(self.ativo) :
+        if self.checarAtivo(self.ativo):
             try:
-                print("---> Fazendo Trade, Ativo:{}, Valor:{}, EXP:{}min".format(self.ativo, self.entrada, self.timeframe))
-                _, ordem_id = self.api.buy(self.entrada, self.ativo, self.direcao, self.timeframe)
-                result = self.api.check_win_v3(ordem_id)
+                logs.print_message(
+                    "Executing programmed trade, paper:{}, action:{}, value:{}, exp:{}min".format(self.ativo,
+                                                                                                  self.direcao,
+                                                                                                  self.entrada,
+                                                                                                  self.timeframe))
+                _, order_id = self.api.buy(self.entrada, self.ativo, self.direcao, self.timeframe)
+                result = self.api.check_win_v3(order_id)
                 if result < 0:
-                
-                    print("---> Você perdeu: Ativo:{}, Valor:{}, Result:LOSE".format(self.ativo, self.entrada))
-                    print("---> Tentando Martin Gale...")
-                    newValue = self.entrada*2
-                    print("---> Fazendo Trade, Ativo:{}, Valor:{}, EXP:{}min".format(self.ativo, newValue, self.timeframe))
-                    _, newordem_id = self.api.buy(newValue, self.ativo, self.direcao, self.timeframe)
-                    newResult = self.api.check_win_v3(newordem_id)
-                    if newResult < 0:
-                        logging.info("Ativo:{}, Valor:{}, Result:LOSE".format(self.ativo, newValue))
-                    else: 
-                        logging.info("Ativo:{}, Valor:{}, Result:WIN".format(self.ativo, newValue))
-                        print("---> Você ganhou.")
-                else: 
-                    logging.info("Ativo:{}, Valor:{}, Result:WIN".format(self.ativo, self.entrada))
-                    print("---> Você ganhou.")
+                    logs.print_message(
+                        "LOST: paper:{}, action:{}, value:{}".format(self.ativo, self.direcao, self.entrada))
+                    logs.print_message("Initializing Martingale paper:{}, action:{}, value:{}".format(self.ativo,
+                                                                                                      self.direcao,
+                                                                                                      self.entrada))
+                    gale_value = self.entrada * 2
+                    logs.print_message(
+                        "Executing programmed trade, paper:{}, action:{}, value:{}, exp:{}min".format(self.ativo,
+                                                                                                      self.direcao,
+                                                                                                      gale_value,
+                                                                                                      self.timeframe))
+                    _, gale_order_id = self.api.buy(gale_value, self.ativo, self.direcao, self.timeframe)
+                    new_result = self.api.check_win_v3(gale_order_id)
+                    if new_result < 0:
+                        logs.print_message(
+                            "LOST: paper:{}, action:{}, value:{}".format(self.ativo, self.direcao, self.entrada))
+                    else:
+                        logs.print_message(
+                            "WIN: paper:{}, action:{}, value:{}".format(self.ativo, self.direcao, gale_value))
+                else:
+                    logs.print_message(
+                        "WIN: paper:{}, action:{}, value:{}".format(self.ativo, self.direcao, self.entrada))
             except:
                 import traceback
-                print("Error ao executar o trade.")
-                logging.error("Error ao executar trade.")
+                logs.print_error("Error on execute order. paper:{}, action:{}, value:{}".format(self.ativo,
+                                                                                                self.direcao,
+                                                                                                self.entrada))
                 logging.error(traceback.format_exc())
+        logging.info("New balance: ${}".format(self.pegarSaldo()))
         schedule.CancelJob
-        print("\nProcessando...")
-
-    
+        logs.print_message("Processing Orders...")

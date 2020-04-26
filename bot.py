@@ -1,32 +1,32 @@
-import time
-import logging
 import os
 import datetime
-import getpass
 import schedule
-from logs import Logs 
+from logs import Logs
 from iqoption import IQOption
 from configs import Configuracoes
-import csv   
+import csv
 import threading
+
+logs = Logs()
 
 
 def run_threaded(job_func):
     job_thread = threading.Thread(target=job_func)
     job_thread.start()
 
-def addOption(ativo, startTime, direcao, entrada):
-    #login
-    email=os.getenv('IQ_USER')
-    senha=os.getenv('IQ_PASS')
-    IQ=IQOption(email, senha)
-    login=IQ.efetuarLogin()
-    if login == False:
-        print("\n----> Ocorreu algum erro ao entrar na sua conta IQ Option, verifique se digitou os dados corretamente ou se possui a autenticação de 2 (dois) fatores ativada")
-        input("\nAperte qualquer tecla para sair..")
+
+def add_option(ativo, startTime, direcao, entrada):
+    # login
+    email = os.getenv('IQ_USER')
+    password = os.getenv('IQ_PASS')
+    IQ = IQOption(email, password)
+    login = IQ.efetuarLogin()
+    if not login:
+        logs.print_error("Error on try to login. Check iq option credentials on environment variables.")
+        input("Press any key to exit...")
         exit()
-    
-    configuracao=Configuracoes()
+
+    configuracao = Configuracoes()
     configuracao.setAtivo(ativo)
     configuracao.setTimeframe(5)
     IQ.setDirecao(direcao)
@@ -34,27 +34,28 @@ def addOption(ativo, startTime, direcao, entrada):
     IQ.contaReal()
     IQ.setEntrada(entrada)
     schedule.every().day.at(startTime).do(run_threaded, IQ.buy)
-    print("Trade Programado-->Ativo:{}, Entrada:{}, Action:{}, Valor:{} ✅".format(ativo, startTime, direcao, entrada))
+    logs.print_message("Trade Programado-->Ativo:{}, Entrada:{}, Action:{}, Valor:{} ✅".format(ativo, startTime, direcao, entrada))
+
 
 def main():
-    logs=Logs()
-    logging.info("Bot Started!")
-    f=open("trades.csv")
+    logs.print_message("Bot Started!")
+    f = open("trades.csv")
     csv_f = csv.reader(f)
     counter = 0
     for row in csv_f:
         if counter == 0:
-            print("\Programando Trades...")
+            logs.print_message("Programming Orders...")
         else:
-            startTime = datetime.datetime.strptime(row[1], '%H:%M')
-            timeResult = startTime - datetime.timedelta(seconds=6)
-            addOption(row[0].replace('/', ''), timeResult.strftime("%H:%M:%S"), row[2], row[3])
+            start_time = datetime.datetime.strptime(row[1], '%H:%M')
+            time_result = start_time - datetime.timedelta(seconds=6)
+            add_option(row[0].replace('/', ''), time_result.strftime("%H:%M:%S"), row[2], row[3])
         counter = counter + 1
-    
-    print("\nProcessando Trades...")
+
+    logs.print_message("Processing Orders...")
 
     while True:
-       schedule.run_pending()
+        schedule.run_pending()
+
 
 if __name__ == "__main__":
     main()

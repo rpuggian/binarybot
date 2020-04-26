@@ -2,21 +2,33 @@ import os
 import datetime
 import logging
 
+
 class Logs:
     def __init__(self):
         super().__init__()
-        self.criarPasta()
-        self.ativarLog()
+        self.create_folder()
+        self.build_files()
 
-    def criarPasta(self):
+    @staticmethod
+    def print_message(message):
+        logging.info(message)
+        print(message)
+
+    @staticmethod
+    def print_error(message):
+        logging.error(message)
+        print(message)
+
+    @staticmethod
+    def create_folder():
         if not os.path.exists("Logs/"):
             os.mkdir("Logs")
 
-    def ativarLog(self):
-        arquivo = "Logs/{}.log".format(
+    @staticmethod
+    def build_files():
+        file = "Logs/{}.log".format(
             datetime.datetime.now().strftime("%d-%m-%Y"))
-        level = logging.INFO
-        formato = "%(asctime)s %(levelname)s: %(message)s"
-        data = "%d-%m-%Y %H:%M:%S"
-        logging.basicConfig(filename=arquivo, level=level,
-                            format=formato, datefmt=data)
+        format = "%(asctime)s %(levelname)s: %(message)s"
+        date = "%d-%m-%Y %H:%M:%S"
+        logging.basicConfig(filename=file, level=logging.INFO,
+                            format=format, datefmt=date)
