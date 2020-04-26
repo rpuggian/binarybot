@@ -40,6 +40,9 @@ class IQOption:
     def setDirecao(self, direcao):
         self.direcao = direcao
 
+    def set_original_balance(self, balance):
+        self.original_balance = balance
+
     def setEntrada(self, entrada):
         try:
             entrada = float(entrada)
@@ -51,6 +54,19 @@ class IQOption:
             return True
         else:
             logging.error("Nao foi possivel definir o preco de entrada")
+            return False
+        
+    def set_stop_win(self, stop_win):
+        try:
+            stop_win = float(stop_win)
+        except:
+            logging.error("Nao foi possivel definir o preco de stop_win")
+            return False
+        if isinstance(stop_win, float):
+            self.stop_win = stop_win
+            return True
+        else:
+            logging.error("Nao foi possivel definir o preco de stop_win")
             return False
     
     def set_stop_loss(self, stop_loss):

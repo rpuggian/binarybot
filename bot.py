@@ -21,7 +21,7 @@ def login(api):
         return True
 
 
-def add_option(ativo, startTime, direcao, entrada, stop_loss, api):
+def add_option(ativo, startTime, direcao, entrada, stop_loss, stop_win, api):
     configuracao = Configuracoes()
     configuracao.setAtivo(ativo)
     configuracao.setTimeframe(5)
@@ -29,6 +29,9 @@ def add_option(ativo, startTime, direcao, entrada, stop_loss, api):
     IQ.setDirecao(direcao)
     IQ.definirConfiguracoes(configuracao.getAtivo(), configuracao.getTimeframe(), 1)
     IQ.contaReal()
+    original_balance = api.get_balance()
+    IQ.set_original_balance(original_balance)
+    IQ.set_stop_win(stop_win)
     IQ.set_stop_loss(stop_loss)
     IQ.setEntrada(entrada)
     schedule.every().day.at(startTime).do(IQ.buy)
@@ -37,7 +40,6 @@ def add_option(ativo, startTime, direcao, entrada, stop_loss, api):
 
 def main():
     logs.print_message("Bot Started!")
-    stop_loss = input("Set a stop loss value for today:")
 
     #login
     email = os.getenv('IQ_USER')
@@ -47,6 +49,11 @@ def main():
         logs.print_error("Error on try to login. Check iq option credentials on environment variables.")
         input("Press any key to exit...")
         exit()
+    logs.print_message("Conected: IQ Option!")
+
+    #stops
+    stop_loss = input("Set a stop loss value for today:")
+    stop_win = input("Set a stop win value for today:")
 
     #read trades
     f = open("trades.csv")
@@ -57,8 +64,8 @@ def main():
             logs.print_message("Programming Orders...")
         else:
             start_time = datetime.datetime.strptime(row[1], '%H:%M')
-            time_result = start_time - datetime.timedelta(seconds=6)
-            add_option(row[0].replace('/', ''), time_result.strftime("%H:%M:%S"), row[2], row[3], stop_loss, api)
+            time_result = start_time - datetime.timedelta(seconds=10)
+            add_option(row[0].replace('/', ''), time_result.strftime("%H:%M:%S"), row[2], row[3], stop_loss, stop_win, api)
         counter = counter + 1
 
     logs.print_message("\nProcessing Orders...")
