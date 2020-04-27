@@ -7,7 +7,7 @@ from configs import Configuracoes
 import csv
 import threading
 from iqoptionapi.stable_api import IQ_Option
-
+import time
 
 logs = Logs()
 
@@ -54,7 +54,7 @@ def main():
     original_balance = api.get_balance()
     logs.print_message("Original balance: $ {}".format(original_balance))
     stop_loss = input("Set a stop loss value:")
-    # stop_win = input("Set a stop win value:")
+    stop_win = input("Set a stop win value:")
 
     #read trades
     f = open("trades.csv")
@@ -65,7 +65,7 @@ def main():
             logs.print_message("Programming Orders...")
         else:
             start_time = datetime.datetime.strptime(row[1], '%H:%M')
-            time_result = start_time - datetime.timedelta(seconds=10)
+            time_result = start_time - datetime.timedelta(seconds=15)
             add_option(row[0].replace('/', ''), time_result.strftime("%H:%M:%S"), row[2], row[3], stop_loss, stop_win, api, original_balance)
         counter = counter + 1
 
@@ -73,6 +73,7 @@ def main():
 
     while True:
         schedule.run_pending()
+        time.sleep(1)
 
 
 if __name__ == "__main__":

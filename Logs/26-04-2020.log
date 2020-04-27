@@ -180,3 +180,199 @@ Processing Orders...
 26-04-2020 19:20:54 INFO: Bot Started!
 26-04-2020 19:20:57 INFO: Conected: IQ Option!
 26-04-2020 19:20:57 INFO: Original balance: $ 6642.56
+26-04-2020 19:21:58 INFO: Bot Started!
+26-04-2020 19:22:01 INFO: Conected: IQ Option!
+26-04-2020 19:22:03 INFO: Original balance: $ 6642.56
+26-04-2020 19:22:06 INFO: Programming Orders...
+26-04-2020 19:22:41 INFO: Bot Started!
+26-04-2020 19:22:44 INFO: Conected: IQ Option!
+26-04-2020 19:22:45 INFO: Original balance: $ 6642.56
+26-04-2020 19:22:50 INFO: Programming Orders...
+26-04-2020 19:22:50 INFO: Ativo definido como EURGBP-OTC
+26-04-2020 19:22:50 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:22:50 INFO: Trade programmed: paper:EURGBP-OTC, exp:19:22:50, action:PUT, value:2 ✅
+26-04-2020 19:22:50 INFO: Ativo definido como EURGBP-OTC
+26-04-2020 19:22:50 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:22:50 INFO: Trade programmed: paper:EURGBP-OTC, exp:14:54:50, action:PUT, value:2 ✅
+26-04-2020 19:22:50 INFO: Ativo definido como EURUSD-OTC
+26-04-2020 19:22:50 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:22:50 INFO: Trade programmed: paper:EURUSD-OTC, exp:10:14:50, action:PUT, value:2 ✅
+26-04-2020 19:22:50 INFO: Ativo definido como EURUSD-OTC
+26-04-2020 19:22:50 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:22:50 INFO: Trade programmed: paper:EURUSD-OTC, exp:11:59:50, action:PUT, value:2 ✅
+26-04-2020 19:22:50 INFO: Ativo definido como GBPJPY-OTC
+26-04-2020 19:22:50 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:22:50 INFO: Trade programmed: paper:GBPJPY-OTC, exp:12:14:50, action:PUT, value:2 ✅
+26-04-2020 19:22:50 INFO: Ativo definido como EURUSD-OTC
+26-04-2020 19:22:50 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:22:50 INFO: Trade programmed: paper:EURUSD-OTC, exp:12:59:50, action:PUT, value:2 ✅
+26-04-2020 19:22:50 INFO: Ativo definido como EURGBP-OTC
+26-04-2020 19:22:50 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:22:50 INFO: Trade programmed: paper:EURGBP-OTC, exp:13:14:50, action:PUT, value:2 ✅
+26-04-2020 19:22:50 INFO: Ativo definido como GBPJPY-OTC
+26-04-2020 19:22:50 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:22:50 INFO: Trade programmed: paper:GBPJPY-OTC, exp:15:14:50, action:PUT, value:2 ✅
+26-04-2020 19:22:50 INFO: 
+Processing Orders...
+26-04-2020 19:23:46 INFO: Bot Started!
+26-04-2020 19:23:50 INFO: Conected: IQ Option!
+26-04-2020 19:23:50 INFO: Original balance: $ 6642.56
+26-04-2020 19:23:59 INFO: Programming Orders...
+26-04-2020 19:23:59 INFO: Ativo definido como EURGBP-OTC
+26-04-2020 19:23:59 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:23:59 INFO: Trade programmed: paper:EURGBP-OTC, exp:19:24:50, action:PUT, value:2 ✅
+26-04-2020 19:23:59 INFO: Ativo definido como EURGBP-OTC
+26-04-2020 19:23:59 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:23:59 INFO: Trade programmed: paper:EURGBP-OTC, exp:14:54:50, action:PUT, value:2 ✅
+26-04-2020 19:23:59 INFO: Ativo definido como EURUSD-OTC
+26-04-2020 19:23:59 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:23:59 INFO: Trade programmed: paper:EURUSD-OTC, exp:10:14:50, action:PUT, value:2 ✅
+26-04-2020 19:23:59 INFO: Ativo definido como EURUSD-OTC
+26-04-2020 19:23:59 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:23:59 INFO: Trade programmed: paper:EURUSD-OTC, exp:11:59:50, action:PUT, value:2 ✅
+26-04-2020 19:23:59 INFO: Ativo definido como GBPJPY-OTC
+26-04-2020 19:23:59 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:23:59 INFO: Trade programmed: paper:GBPJPY-OTC, exp:12:14:50, action:PUT, value:2 ✅
+26-04-2020 19:23:59 INFO: Ativo definido como EURUSD-OTC
+26-04-2020 19:23:59 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:23:59 INFO: Trade programmed: paper:EURUSD-OTC, exp:12:59:50, action:PUT, value:2 ✅
+26-04-2020 19:23:59 INFO: Ativo definido como EURGBP-OTC
+26-04-2020 19:23:59 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:23:59 INFO: Trade programmed: paper:EURGBP-OTC, exp:13:14:50, action:PUT, value:2 ✅
+26-04-2020 19:23:59 INFO: Ativo definido como GBPJPY-OTC
+26-04-2020 19:23:59 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:23:59 INFO: Trade programmed: paper:GBPJPY-OTC, exp:15:14:50, action:PUT, value:2 ✅
+26-04-2020 19:23:59 INFO: 
+Processing Orders...
+26-04-2020 19:24:50 INFO: Running job Every 1 day at 19:24:50 do buy() (last run: [never], next run: 2020-04-26 19:24:50)
+26-04-2020 19:25:02 INFO: Ativo encontrado
+26-04-2020 19:25:02 INFO: Executing programmed trade, paper:EURGBP-OTC, action:PUT, value:2.0, exp:5min
+26-04-2020 19:26:34 INFO: Bot Started!
+26-04-2020 19:26:38 INFO: Conected: IQ Option!
+26-04-2020 19:26:38 INFO: Original balance: $ 6640.56
+26-04-2020 19:26:41 INFO: Programming Orders...
+26-04-2020 19:26:41 INFO: Ativo definido como EURGBP-OTC
+26-04-2020 19:26:41 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:26:41 INFO: Trade programmed: paper:EURGBP-OTC, exp:19:26:50, action:PUT, value:2 ✅
+26-04-2020 19:26:41 INFO: Ativo definido como EURGBP-OTC
+26-04-2020 19:26:41 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:26:41 INFO: Trade programmed: paper:EURGBP-OTC, exp:14:54:50, action:PUT, value:2 ✅
+26-04-2020 19:26:41 INFO: Ativo definido como EURUSD-OTC
+26-04-2020 19:26:41 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:26:41 INFO: Trade programmed: paper:EURUSD-OTC, exp:10:14:50, action:PUT, value:2 ✅
+26-04-2020 19:26:41 INFO: Ativo definido como EURUSD-OTC
+26-04-2020 19:26:41 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:26:41 INFO: Trade programmed: paper:EURUSD-OTC, exp:11:59:50, action:PUT, value:2 ✅
+26-04-2020 19:26:41 INFO: Ativo definido como GBPJPY-OTC
+26-04-2020 19:26:41 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:26:41 INFO: Trade programmed: paper:GBPJPY-OTC, exp:12:14:50, action:PUT, value:2 ✅
+26-04-2020 19:26:41 INFO: Ativo definido como EURUSD-OTC
+26-04-2020 19:26:41 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:26:41 INFO: Trade programmed: paper:EURUSD-OTC, exp:12:59:50, action:PUT, value:2 ✅
+26-04-2020 19:26:41 INFO: Ativo definido como EURGBP-OTC
+26-04-2020 19:26:41 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:26:41 INFO: Trade programmed: paper:EURGBP-OTC, exp:13:14:50, action:PUT, value:2 ✅
+26-04-2020 19:26:41 INFO: Ativo definido como GBPJPY-OTC
+26-04-2020 19:26:41 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:26:41 INFO: Trade programmed: paper:GBPJPY-OTC, exp:15:14:50, action:PUT, value:2 ✅
+26-04-2020 19:26:41 INFO: 
+Processing Orders...
+26-04-2020 19:27:01 INFO: Bot Started!
+26-04-2020 19:27:05 INFO: Conected: IQ Option!
+26-04-2020 19:27:05 INFO: Original balance: $ 6640.56
+26-04-2020 19:27:07 INFO: Programming Orders...
+26-04-2020 19:27:07 INFO: Ativo definido como EURGBP-OTC
+26-04-2020 19:27:07 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:27:07 INFO: Trade programmed: paper:EURGBP-OTC, exp:19:27:50, action:PUT, value:2 ✅
+26-04-2020 19:27:07 INFO: Ativo definido como EURGBP-OTC
+26-04-2020 19:27:07 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:27:07 INFO: Trade programmed: paper:EURGBP-OTC, exp:14:54:50, action:PUT, value:2 ✅
+26-04-2020 19:27:07 INFO: Ativo definido como EURUSD-OTC
+26-04-2020 19:27:07 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:27:07 INFO: Trade programmed: paper:EURUSD-OTC, exp:10:14:50, action:PUT, value:2 ✅
+26-04-2020 19:27:07 INFO: Ativo definido como EURUSD-OTC
+26-04-2020 19:27:07 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:27:07 INFO: Trade programmed: paper:EURUSD-OTC, exp:11:59:50, action:PUT, value:2 ✅
+26-04-2020 19:27:07 INFO: Ativo definido como GBPJPY-OTC
+26-04-2020 19:27:07 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:27:07 INFO: Trade programmed: paper:GBPJPY-OTC, exp:12:14:50, action:PUT, value:2 ✅
+26-04-2020 19:27:07 INFO: Ativo definido como EURUSD-OTC
+26-04-2020 19:27:07 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:27:07 INFO: Trade programmed: paper:EURUSD-OTC, exp:12:59:50, action:PUT, value:2 ✅
+26-04-2020 19:27:07 INFO: Ativo definido como EURGBP-OTC
+26-04-2020 19:27:07 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:27:07 INFO: Trade programmed: paper:EURGBP-OTC, exp:13:14:50, action:PUT, value:2 ✅
+26-04-2020 19:27:07 INFO: Ativo definido como GBPJPY-OTC
+26-04-2020 19:27:07 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:27:07 INFO: Trade programmed: paper:GBPJPY-OTC, exp:15:14:50, action:PUT, value:2 ✅
+26-04-2020 19:27:07 INFO: 
+Processing Orders...
+26-04-2020 19:27:50 INFO: Running job Every 1 day at 19:27:50 do buy() (last run: [never], next run: 2020-04-26 19:27:50)
+26-04-2020 19:27:54 INFO: Ativo encontrado
+26-04-2020 19:27:54 INFO: Executing programmed trade, paper:EURGBP-OTC, action:PUT, value:2.0, exp:5min
+26-04-2020 19:28:44 INFO: Bot Started!
+26-04-2020 19:28:50 INFO: Conected: IQ Option!
+26-04-2020 19:28:50 INFO: Original balance: $ 6641.55
+26-04-2020 19:28:56 INFO: Programming Orders...
+26-04-2020 19:28:56 INFO: Ativo definido como EURGBP-OTC
+26-04-2020 19:28:56 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:28:56 INFO: Trade programmed: paper:EURGBP-OTC, exp:19:29:45, action:PUT, value:2 ✅
+26-04-2020 19:28:56 INFO: Ativo definido como EURGBP-OTC
+26-04-2020 19:28:56 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:28:56 INFO: Trade programmed: paper:EURGBP-OTC, exp:14:54:45, action:PUT, value:2 ✅
+26-04-2020 19:28:56 INFO: Ativo definido como EURUSD-OTC
+26-04-2020 19:28:56 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:28:56 INFO: Trade programmed: paper:EURUSD-OTC, exp:10:14:45, action:PUT, value:2 ✅
+26-04-2020 19:28:56 INFO: Ativo definido como EURUSD-OTC
+26-04-2020 19:28:56 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:28:56 INFO: Trade programmed: paper:EURUSD-OTC, exp:11:59:45, action:PUT, value:2 ✅
+26-04-2020 19:28:56 INFO: Ativo definido como GBPJPY-OTC
+26-04-2020 19:28:56 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:28:56 INFO: Trade programmed: paper:GBPJPY-OTC, exp:12:14:45, action:PUT, value:2 ✅
+26-04-2020 19:28:56 INFO: Ativo definido como EURUSD-OTC
+26-04-2020 19:28:56 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:28:56 INFO: Trade programmed: paper:EURUSD-OTC, exp:12:59:45, action:PUT, value:2 ✅
+26-04-2020 19:28:56 INFO: Ativo definido como EURGBP-OTC
+26-04-2020 19:28:56 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:28:56 INFO: Trade programmed: paper:EURGBP-OTC, exp:13:14:45, action:PUT, value:2 ✅
+26-04-2020 19:28:56 INFO: Ativo definido como GBPJPY-OTC
+26-04-2020 19:28:56 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:28:56 INFO: Trade programmed: paper:GBPJPY-OTC, exp:15:14:45, action:PUT, value:2 ✅
+26-04-2020 19:28:56 INFO: 
+Processing Orders...
+26-04-2020 19:29:45 INFO: Running job Every 1 day at 19:29:45 do buy() (last run: [never], next run: 2020-04-26 19:29:45)
+26-04-2020 19:29:59 INFO: Ativo encontrado
+26-04-2020 19:29:59 INFO: Executing programmed trade, paper:EURGBP-OTC, action:PUT, value:2.0, exp:5min
+26-04-2020 19:31:10 INFO: Bot Started!
+26-04-2020 19:31:13 INFO: Conected: IQ Option!
+26-04-2020 19:31:13 INFO: Original balance: $ 6640.26
+26-04-2020 19:31:17 INFO: Programming Orders...
+26-04-2020 19:31:17 INFO: Ativo definido como EURGBP-OTC
+26-04-2020 19:31:17 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:31:17 INFO: Trade programmed: paper:EURGBP-OTC, exp:19:31:45, action:PUT, value:2 ✅
+26-04-2020 19:31:17 INFO: Ativo definido como EURGBP-OTC
+26-04-2020 19:31:17 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:31:17 INFO: Trade programmed: paper:EURGBP-OTC, exp:19:32:45, action:PUT, value:2 ✅
+26-04-2020 19:31:17 INFO: Ativo definido como EURUSD-OTC
+26-04-2020 19:31:17 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:31:17 INFO: Trade programmed: paper:EURUSD-OTC, exp:19:33:45, action:PUT, value:2 ✅
+26-04-2020 19:31:17 INFO: Ativo definido como EURUSD-OTC
+26-04-2020 19:31:17 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:31:17 INFO: Trade programmed: paper:EURUSD-OTC, exp:11:59:45, action:PUT, value:2 ✅
+26-04-2020 19:31:17 INFO: Ativo definido como GBPJPY-OTC
+26-04-2020 19:31:17 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:31:17 INFO: Trade programmed: paper:GBPJPY-OTC, exp:12:14:45, action:PUT, value:2 ✅
+26-04-2020 19:31:17 INFO: Ativo definido como EURUSD-OTC
+26-04-2020 19:31:17 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:31:17 INFO: Trade programmed: paper:EURUSD-OTC, exp:12:59:45, action:PUT, value:2 ✅
+26-04-2020 19:31:17 INFO: Ativo definido como EURGBP-OTC
+26-04-2020 19:31:17 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:31:17 INFO: Trade programmed: paper:EURGBP-OTC, exp:13:14:45, action:PUT, value:2 ✅
+26-04-2020 19:31:17 INFO: Ativo definido como GBPJPY-OTC
+26-04-2020 19:31:17 INFO: Timeframe definido para 5 minutos
+26-04-2020 19:31:17 INFO: Trade programmed: paper:GBPJPY-OTC, exp:15:14:45, action:PUT, value:2 ✅
+26-04-2020 19:31:17 INFO: 
+Processing Orders...
+26-04-2020 19:31:45 INFO: Running job Every 1 day at 19:31:45 do buy() (last run: [never], next run: 2020-04-26 19:31:45)
+26-04-2020 19:31:50 INFO: Ativo encontrado
+26-04-2020 19:31:50 INFO: Executing programmed trade, paper:EURGBP-OTC, action:PUT, value:2.0, exp:5min
