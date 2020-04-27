@@ -28,7 +28,7 @@ def add_option(ativo, startTime, direcao, entrada, stop_loss, stop_win, api, ori
     IQ = IQOption(api)
     IQ.setDirecao(direcao)
     IQ.definirConfiguracoes(configuracao.getAtivo(), configuracao.getTimeframe(), 1)
-    IQ.contaDemo()
+    IQ.contaReal()
     IQ.set_original_balance(original_balance)
     IQ.set_stop_win(stop_win)
     IQ.set_stop_loss(stop_loss)
