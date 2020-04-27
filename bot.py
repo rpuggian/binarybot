@@ -8,9 +8,15 @@ import csv
 import threading
 from iqoptionapi.stable_api import IQ_Option
 import time
+import threading
+
 
 logs = Logs()
 
+
+def run_threaded(job_func):
+    job_thread = threading.Thread(target=job_func)
+    job_thread.start()
 
 def login(api):
     conectado, _ = api.connect()
@@ -28,12 +34,12 @@ def add_option(ativo, startTime, direcao, entrada, stop_loss, stop_win, api, ori
     IQ = IQOption(api)
     IQ.setDirecao(direcao)
     IQ.definirConfiguracoes(configuracao.getAtivo(), configuracao.getTimeframe(), 1)
-    IQ.contaReal()
+    IQ.contaDemo()
     IQ.set_original_balance(original_balance)
     IQ.set_stop_win(stop_win)
     IQ.set_stop_loss(stop_loss)
     IQ.setEntrada(entrada)
-    schedule.every().day.at(startTime).do(IQ.buy)
+    schedule.every().day.at(startTime).do(run_threaded, IQ.buy)
     logs.print_message("Trade programmed: paper:{}, exp:{}, action:{}, value:{} ✅".format(ativo, startTime, direcao, entrada))
 
 
@@ -51,6 +57,8 @@ def main():
     logs.print_message("Conected: IQ Option!")
 
     #stops
+    #REAL / PRACTICE
+    api.change_balance("REAL")
     original_balance = api.get_balance()
     logs.print_message("Original balance: $ {}".format(original_balance))
     stop_loss = input("Set a stop loss value:")
