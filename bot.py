@@ -52,7 +52,6 @@ def main():
     api = IQ_Option(email, password)
     if not login(api):
         logs.print_error("Error on try to login. Check iq option credentials on environment variables.")
-        input("Press any key to exit...")
         exit()
     logs.print_message("Conected: IQ Option!")
 
@@ -61,7 +60,7 @@ def main():
     account_type = input("Set the account type (REAL or PRACTICE):")
     api.change_balance(account_type)
     original_balance = api.get_balance()
-    logs.print_message("Original balance: $ {}".format(original_balance)
+    logs.print_message("Original balance: $ {}".format(original_balance))
     stop_loss = input("Set a stop loss value:")
     stop_win = input("Set a stop win value:")
 
