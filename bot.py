@@ -34,7 +34,6 @@ def add_option(ativo, startTime, direcao, entrada, stop_loss, stop_win, api, ori
     IQ = IQOption(api)
     IQ.setDirecao(direcao)
     IQ.definirConfiguracoes(configuracao.getAtivo(), configuracao.getTimeframe(), 1)
-    IQ.contaDemo()
     IQ.set_original_balance(original_balance)
     IQ.set_stop_win(stop_win)
     IQ.set_stop_loss(stop_loss)
@@ -47,8 +46,9 @@ def main():
     logs.print_message("Bot Started!")
 
     #login
-    email = os.getenv('IQ_USER')
-    password = os.getenv('IQ_PASS')
+    logs.print_message("Login Credentials IQ Option:")
+    email = input("Email:")
+    password = input("Pass:")
     api = IQ_Option(email, password)
     if not login(api):
         logs.print_error("Error on try to login. Check iq option credentials on environment variables.")
@@ -58,9 +58,10 @@ def main():
 
     #stops
     #REAL / PRACTICE
-    api.change_balance("REAL")
+    account_type = input("Set the account type (REAL or PRACTICE):")
+    api.change_balance(account_type)
     original_balance = api.get_balance()
-    logs.print_message("Original balance: $ {}".format(original_balance))
+    logs.print_message("Original balance: $ {}".format(original_balance)
     stop_loss = input("Set a stop loss value:")
     stop_win = input("Set a stop win value:")
 

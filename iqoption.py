@@ -126,6 +126,10 @@ class IQOption:
         if balance <= self.stop_loss:
             logs.print_message("Stop loss reached, no trading more today. ❌")
             exit()
+        
+        if balance >= self.stop_win:
+            logs.print_message("Stop win reached, no trading more today. ❌")
+            exit()
 
         if self.checarAtivo(self.ativo):
             try:
@@ -148,3 +152,4 @@ class IQOption:
         logs.print_message("New balance: ${}".format(self.pegarSaldo()))
         schedule.CancelJob
         logs.print_message("\nProcessing Orders...")
+        exit()
