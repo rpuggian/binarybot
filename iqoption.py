@@ -94,6 +94,11 @@ class IQOption:
 
 
     def execute_martingale(self):
+        balance = self.pegarSaldo()
+        if balance <= self.stop_loss:
+            logs.print_message("Stop loss reached, no trading more today. ❌")
+            exit()
+            
         self.entrada = self.entrada * 2
         logs.print_message("Initializing Martingale paper:{}, action:{}, value:{}".format(self.ativo,
                                                                                           self.direcao,
