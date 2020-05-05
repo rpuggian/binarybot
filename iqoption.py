@@ -95,9 +95,7 @@ class IQOption:
 
     def execute_martingale(self):
         balance = self.pegarSaldo()
-        if balance <= self.stop_loss:
-            logs.print_message("Stop loss reached, no trading more today. ❌")
-            exit()
+        self.check_stops(balance)
             
         self.entrada = self.entrada * 2
         logs.print_message("Initializing Martingale paper:{}, action:{}, value:{}".format(self.ativo,
@@ -124,10 +122,10 @@ class IQOption:
                                                                                             self.timeframe))
             _, gale2_order_id = self.api.buy( self.entrada, self.ativo, self.direcao, self.timeframe)
             self.check_trade_result(gale2_order_id)
+            
 
     
-    def buy(self):
-        balance = self.pegarSaldo()
+    def check_stops(self, balance):
         if balance <= self.stop_loss:
             logs.print_message("Stop loss reached, no trading more today. ❌")
             exit()
@@ -136,6 +134,11 @@ class IQOption:
             logs.print_message("Stop win reached, no trading more today. ❌")
             exit()
 
+
+    def buy(self):
+        balance = self.pegarSaldo()
+        self.check_stops(balance)
+    
         if self.checarAtivo(self.ativo):
             try:
                 logs.print_message(
