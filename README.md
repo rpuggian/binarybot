@@ -19,4 +19,4 @@ After fill the csv with your trades, run the bot using:
 python bot.py
 ```
 
-Type all needed information and your IQoption credentials to start.
+Bot will ask to type all needed information and your IQoption credentials to start.
